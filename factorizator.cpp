@@ -2,14 +2,6 @@
 #include <iostream>
 using namespace std;
 
-Factored Factorizator::CalculateFactorial(int z)
-{
-  Factored temp;
-  for (auto i = z; i > 1; --i)
-    temp = Multiply(temp, Factorize(i));
-  return temp;
-}
-
 Factorizator::Factorizator(int max) : max_num{max}
 {
   for (int i = 2; i <= max_num; ++i){
@@ -21,6 +13,15 @@ Factorizator::Factorizator(int max) : max_num{max}
         prime_numbers.push_back(i);
     }
 }
+
+Factored Factorizator::CalculateFactorial(int z)
+{
+  Factored temp;
+  for (auto i = z; i > 1; --i)
+    temp = Multiply(temp, Factorize(i));
+  return temp;
+}
+
 Factored Factorizator::Multiply(Factored m_1, Factored m_2){
   for (auto x : m_2)
     m_1[x.first] += x.second;
@@ -30,6 +31,27 @@ Factored Factorizator::Divide(Factored m_1, Factored m_2){
   for (auto x : m_2)
     m_1[x.first] -= x.second;
   return m_1;
+}
+
+bool Factorizator::IsFactoredLessThan(Factored f, int max)
+{
+  int temp{1};
+  for (auto x : f)
+    {
+      while (x.second != 0) {
+         temp *= x.first;
+         if (temp > max)
+           return true;
+         --x.second;
+        }
+    }
+  return false;
+}
+
+Factored Factorizator::Binominal(int m, int n)
+{
+   auto temp = Multiply( CalculateFactorial(n - m), CalculateFactorial(m) );
+   return Divide(CalculateFactorial(n), temp);
 }
 
 Factored Factorizator::Factorize(int to_fact)

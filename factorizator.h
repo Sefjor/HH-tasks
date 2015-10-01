@@ -11,6 +11,8 @@ public:
   Factored Factorize(int);
   Factored Multiply(Factored m_1, Factored m_2);
   Factored Divide(Factored m_1, Factored m_2);
+  bool IsFactoredLessThan(Factored f, int max);
+  Factored Binominal(int m, int n);
 private:
   int max_num;
   std::vector<int> prime_numbers{};

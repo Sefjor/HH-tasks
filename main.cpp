@@ -1,14 +1,12 @@
-//#include <task1.h>
-//#include <stringmath.h>
+#include <task1.h>
+#include <task2.h>
+#include <stringmath.h>
 #include <iostream>
-#include <factorizator.h>
 int main()
 {
-  //Task1 task_1;
-  //task_1(1 , 13258);
- // std::cout << Binominal(4,15);
-  Factorizator f{127};
-  auto temp = f.Multiply( f.CalculateFactorial(12), f.CalculateFactorial(3) );
-  for (auto x : f.Divide(f.CalculateFactorial(15), temp))
-       std::cout << x.first << ":" << x.second << std::endl;
+ // Task1 task_1;
+ // task_1(1 , 13258);
+  //Task2 task_2;
+  Factorizator f(127);
+  std::cout << (f.IsFactoredLessThan(f.CalculateFactorial(7), 5039) ? "true" : "false");
 }

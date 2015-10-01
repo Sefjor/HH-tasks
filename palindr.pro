@@ -18,9 +18,11 @@ TEMPLATE = app
 SOURCES += main.cpp \
     task1.cpp \
     stringmath.cpp \
-    factorizator.cpp
+    factorizator.cpp \
+    task2.cpp
 
 HEADERS += \
     task1.h \
     stringmath.h \
-    factorizator.h
+    factorizator.h \
+    task2.h
