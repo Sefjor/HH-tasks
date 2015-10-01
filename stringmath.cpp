@@ -1,5 +1,12 @@
 #include "stringmath.h"
 using namespace std;
+Data ToVector(int x){
+  Data d{x};
+  return d;
+}
+
+
+
 auto add_leading_zeroes = [](int number_of_zeroes, string s){
     for (int i = 0; i < number_of_zeroes; ++i)
       s = "0" + s;
@@ -44,7 +51,7 @@ string Factorial(string s){
     fact = StringMultiply(fact, counter);
   return fact;
 }
-
+//any noninteger result will produce infinite cycle here
 std::string StringDivide(string divident, string divider){
   string quotient{"0"};
   string result{"0"};
@@ -55,6 +62,11 @@ std::string StringDivide(string divident, string divider){
    while (result != divident);
   return quotient;
 }
+std::string Binominal(int m, int n){
+  string temp = StringMultiply( Factorial( to_string(m) ), Factorial( to_string(n - m) ) );
+  return StringDivide(Factorial( to_string(n) ), temp);
+}
+
 
 
 
