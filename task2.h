@@ -6,10 +6,11 @@ class Task2
 {
 public:
   Task2(int, int);
+  void Calculate();
 
 private:
-  int m, n;
-  Factorizator f;
+  int n_max, over;
+   Factorizator f;
 };
 
 #endif // TASK2_H

@@ -19,10 +19,12 @@ SOURCES += main.cpp \
     task1.cpp \
     stringmath.cpp \
     factorizator.cpp \
-    task2.cpp
+    task2.cpp \
+    task3.cpp
 
 HEADERS += \
     task1.h \
     stringmath.h \
     factorizator.h \
-    task2.h
+    task2.h \
+    task3.h

@@ -33,7 +33,7 @@ Factored Factorizator::Divide(Factored m_1, Factored m_2){
   return m_1;
 }
 
-bool Factorizator::IsFactoredLessThan(Factored f, int max)
+bool Factorizator::IsFactoredMoreThan(Factored f, int max)
 {
   int temp{1};
   for (auto x : f)
