@@ -1,6 +1,7 @@
 #include <task1.h>
 #include <task2.h>
 #include <task3.h>
+#include <task4.h>
 #include <stringmath.h>
 #include <iostream>
 int main()
@@ -10,16 +11,23 @@ int main()
   // Task1 task_1;
   // task_1(1 , 13258);
   std::cout << std::endl;
-  
+
   // Для какого количества пар n и k, при условии 1<=n<126 и 1<=k<n, число сочетаний из n по k больше 1000000?
   // Task2 task_2(126, 1000*1000);
   // task_2.Calculate(); //Оптимизации: Обратный порядок цикла в if_factored. Преподсчет факториалов.
   std::cout << std::endl;
-  
+
   //Найдите сумму всех цифр в 201!
   // Task3 task_3;
   // task_3.Calculate(201); //Оптимизации: Использовать класс factorizator с доработками
   std::cout << std::endl;
-  
-  //
+
+  //Найдите наименьшее положительное натуральное x такое, что числа 4*x, 6*x можно получить друг из друга перестановкой цифр.
+ //  Task4 task_4;
+ //  task_4.Calculate(4, 6); //Оптимизации: на столь маленьких числах строковая арифметика не нужна
+   std::cout << std::endl;
+   
+   Task5 task_5;
+ //  task_5.Calculate(); //Оптимизации: 
+   std::cout << std::endl;
 }
